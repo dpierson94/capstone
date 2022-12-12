@@ -37,7 +37,8 @@ router.hooks({
             store.Home.weather = {};
             store.Home.weather.city = response.data.name;
             store.Home.weather.temp = kelvinToFahrenheit(response.data.main.temp);
-            store.Home.weather.feelsLike = kelvinToFahrenheit(response.data.main.feels_like);
+            store.Home.weather.humidity = response.data.main.humidity;
+            store.Home.weather.wind = response.data.wind.speed;
             store.Home.weather.description = response.data.weather[0].main;
             done();
           })
