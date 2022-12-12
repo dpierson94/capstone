@@ -8,4 +8,6 @@ export default () => html`
     <label for="suggestion">Suggestions:</label><br>
     <input type ="text" id="suggestion" name="suggestion">
   </div>
+  </form>
+  </section>
   `;
