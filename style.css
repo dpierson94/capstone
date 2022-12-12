@@ -1,0 +1,35 @@
+nav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: green;
+  color: black;
+}
+
+nav > ul {
+  list-style: none;
+}
+
+nav > ul > li {
+  float: left;
+  padding: 20px;
+}
+
+#report {
+  display:grid;
+}
+
+#suggestion{
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+footer {
+  display: flex;
+align-items: center;
+flex-direction: column-reverse;
+}
+
+
+
