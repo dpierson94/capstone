@@ -15,8 +15,21 @@ nav > ul > li {
   padding: 20px;
 }
 
-home > footer {
-  display: flex;
-  align-items: center;
-  align-items: flex-end;
+#report {
+  display:grid;
 }
+
+#suggestion{
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+footer {
+  display: flex;
+align-items: center;
+flex-direction: column-reverse;
+}
+
+
+
