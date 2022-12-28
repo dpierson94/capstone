@@ -1,4 +1,5 @@
 export default {
-  header: "My Forms Page",
+  header: "Invasive Species Report MO",
   view: "Forms",
+  weather: {}
 };

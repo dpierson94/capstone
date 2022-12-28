@@ -1,31 +1,105 @@
 import html from "html-literal";
 
-export default () => html`
+export default (state) => html`
 <section id="forms">
-<form id="forms" method="POST" action="">
-  <h2>Fill out your report</h2>
-  <div id="report">
-    <label for="servicename">Service Name:</label><br>
-    <input type ="text" id="servicename" name="servicename"><br>
-    <label for="client">Client:</label><br>
-    <input type ="text" id="client" name="client"><br>
-    <label for="address">Address:</label><br>
-    <input type ="text" id="address" name="address"><br>
-    <label for="city">City:</label><br>
-    <input type ="text" id="city" name="city"><br>
-    <label for="zipCode">Zip Code:</label><br>
-    <input type ="text" id="zipcode" name="zipcode"><br>
-    <label for="applicationdate">Application Date:</label><br>
-    <input type ="text" id="applicationdate" name="applicationdate"><br>
-    <label for="timestarted">Time Started:</label><br>
-    <input type ="text" id="timestarted" name="timestarted"><br>
-    <label for="timestopped">Time Stopped:</label><br>
-    <input type ="text" id="timestopped" name="timestopped"><br>
-    <label for="herbicideamount">Herbicide Amount:</label><br>
-    <input type ="text" id="herbicideamount" name="herbicideamount"><br>
-    <label for="targetspecies">Target Species:</label><br>
-    <input type ="text" id="targetspecies" name="targetspecies"><br>
-  </div>
-</form>
+  <form id="forms" method="POST" action="">
+    <h2 id="headtworeport">Herbicide Use Report & Weather</h2>
+    <div id="reports">
+      <div class="repone">
+        <label for="servicename">Service Name:</label><br>
+        <input type ="text" id="servicename" name="servicename"><br>
+      </div>
+      <div class="reptwo">
+        <label for="client">Client:</label><br>
+        <input type ="text" id="client" name="client"><br>
+      </div>
+      <div class="repthree">
+        <label for="address">Address:</label><br>
+        <input type ="text" id="address" name="address"><br>
+      </div>
+      <div class="repfour">
+        <label for="city">City:</label><br>
+        <input type ="text" id="city" name="city"><br>
+      </div>
+      <div class="repfive">
+        <label for="zipCode">Zip Code:</label><br>
+        <input type ="text" id="zipcode" name="zipcode"><br>
+      </div>
+      <div class="repsix">
+        <label for="applicationdate">Application Date:</label><br>
+        <input type ="text" id="applicationdate" name="applicationdate"><br>
+      </div>
+      <div class="repseven">
+        <label for="timestarted">Time Started:</label><br>
+        <input type ="text" id="timestarted" name="timestarted"><br>
+      </div>
+      <div class="repeight">
+        <label for="timestopped">Time Stopped:</label><br>
+        <input type ="text" id="timestopped" name="timestopped"><br>
+      </div>
+      <div class="repnine">
+        <label for="herbicideamount">Herbicide Amount:</label><br>
+        <input type ="text" id="herbicideamount" name="herbicideamount"><br>
+      </div>
+      <div class="repten">
+        <label for="targetspecies">Target Species:</label><br>
+        <input type ="text" id="targetspecies" name="targetspecies"><br>
+      </div>
+      <div class="repeleven">
+        <label for="papplied">Pesticide Applied:</label><br>
+        <input type ="text" id="papplied" name="papplied"><br>
+      </div>
+      <div class="reptwelve">
+        <label for="apprate">Application Rate:</label><br>
+        <input type ="text" id="apprate" name="apprate"><br>
+      </div>
+      <div class="reptwelvetwo">
+        <label for="appratetwo">Application Rate Two:</label><br>
+        <input type ="text" id="apprate" name="apprate"><br>
+      </div>
+      <div class="repthirteen">
+        <label for="epanum">EPA Number:</label><br>
+        <input type ="text" id="epanum" name="epanum"><br>
+      </div>
+      <div class="repthirteentwo">
+        <label for="epanumtwo">EPA Number Two:</label><br>
+        <input type ="text" id="epanum" name="epanum"><br>
+      </div>
+      <div class="repfourteen">
+        <label for="addmat">Additional Materials:</label><br>
+        <input type ="text" id="addmat" name="addmat"><br>
+      </div>
+    </div>
+    <div id="weather">
+      <div class="reptemp">
+        <label for="tempf">Temperature:</label><br>
+        <input type ="text" value="${state.weather.temp}">
+        <!-- id="tempf" name="tempf"> -->
+      </div>
+      <div class="repwinddir">
+        <label for="winddir">Wind Direction:</label><br>
+        <input type ="text" id="winddir" name="winddir"><br>
+      </div>
+      <div class="repwindspe">
+        <label for="windspe">Wind Speed:</label><br>
+        <input type ="text" id="windspe" name="winspe"><br>
+      </div>
+      <div class="repcloudcov">
+        <label for="cloudcov">Cloud Cover:</label><br>
+        <input type ="text" id="cloudcov" name="cloudcov"><br>
+      </div>
+      <div class="rephumid">
+        <label for="humid">Humidity:</label><br>
+        <input type ="text" id="humid" name="humid"><br>
+      </div>
+      <div class="save">
+        </a>
+      </div>
+      <div class="print">
+        <button type="submit" onclick="window.print();return false;" />Print</button>
+      </div>
+    </div>
+  </form>
 </section>
   `;
+
