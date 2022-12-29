@@ -1,8 +1,8 @@
 import html from "html-literal";
 
 export default (state) => html`
-<section id="forms">
-  <form id="forms" method="POST" action="">
+<section id="Forms">
+  <form id="Forms" method="POST" action="">
     <h2 id="headtworeport">Herbicide Use Report & Weather</h2>
     <div id="reports">
       <div class="repone">
@@ -73,8 +73,7 @@ export default (state) => html`
     <div id="weather">
       <div class="reptemp">
         <label for="tempf">Temperature:</label><br>
-        <input type ="text" value="${state.weather.temp}">
-        <!-- id="tempf" name="tempf"> -->
+        <input type ="text" value=${state.weather.temp}&deg;F>
       </div>
       <div class="repwinddir">
         <label for="winddir">Wind Direction:</label><br>
@@ -90,7 +89,7 @@ export default (state) => html`
       </div>
       <div class="rephumid">
         <label for="humid">Humidity:</label><br>
-        <input type ="text" id="humid" name="humid"><br>
+        <input type ="text" value=${state.weather.humidity}%><br>
       </div>
       <div class="save">
         </a>

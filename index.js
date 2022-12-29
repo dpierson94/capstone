@@ -16,12 +16,29 @@ function render(state = store.Home) {
     ${Main(state)}
     ${Footer()}
   `;
+  afterRender(state);
   router.updatePageLinks();
 }
 
+function afterRender(state) {
+  // add menu toggle to bars icon in nav bar
+  document.querySelector(".fa-bars").addEventListener("click", () => {
+    document.querySelector("nav > ul").classList.toggle("hidden--mobile");
+  });
+
+  if (state.view === "Forms") {
+    document.querySelector("form").addEventListener("submit", event => {
+      event.preventDefault();
+
+      const inputList = event.target.elements;
+      console.log("Input Element List", inputList);
+    });
+  }
+};
+
 router.hooks({
   before: (done, params) => {
-    const view = params && params.data && params.data.view ? capitalize(params.data.view) : "Home";
+    const view = params && params.data && params.data.view ? capitalize(params.data.view) : "Forms";
 
     // Add a switch case statement to handle multiple routes
     switch (view) {

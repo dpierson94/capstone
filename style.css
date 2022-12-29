@@ -47,7 +47,7 @@ background-color: burlywood;
 }
 
 div input {
-  width: 300px;
+  width: 200px;
 }
 
 .repone {
@@ -182,23 +182,68 @@ background-color: rgb(19, 136, 72);
 }
 
 
+/* #subform tbody {
+  width: 100%;
+}
+
+#subform th {
+  text-align: center;
+}
+
+#subform td,th {
+  width: 15%;
+} */
 
 
 
+#custdata tbody {
+  width: 100%;
+}
+
+#custdata th {
+  text-align: center;
+}
+
+#custdata td,th {
+  width: 20%;
+}
+
+#timedata tbody {
+  width: 100%;
+}
+
+#timedata th {
+  text-align: center;
+}
+
+#timedata td,th {
+  width: 10%;
+}
+
+#workdata tbody {
+  width: 100%;
+}
+
+#workdata th {
+  text-align: center;
+}
+
+#workdata td,th {
+  width: 10%;
+}
 
 
+#weatherdata tbody {
+  width: 100%;
+}
 
+#weatherdata th {
+  text-align: center;
+}
 
-
-
-
-
-
-
-
-
-
-
+#weatherdata td,th {
+  width: 15%;
+}
 
 
 
