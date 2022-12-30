@@ -5,7 +5,7 @@ export default (state) => html`
   <h2>IS Report MO</h2>
     <p>Welcome to Invasive Species(IS) Report MO.</p>
     <h3>
-    The cloud conditions in ${state.weather.city} are ${state.weather.description}. Temperature is ${state.weather.temp}F,
+    The cloud conditions in ${state.weather.city} are ${state.weather.description}. Temperature is ${state.weather.temp} F &deg;;,
     Humidity is ${state.weather.humidity}%, Wind Speed is ${state.weather.wind}m/s;
 </h3>
 </section>

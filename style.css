@@ -2,7 +2,7 @@ nav {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: green;
+  background-color: green ;
   color: black;
 }
 
@@ -15,19 +15,253 @@ nav > ul > li {
   padding: 20px;
 }
 
-#report {
-  display:grid;
+#Home {
+  background: url(file:///C:/Users/dpier/code/savvycoders/capstone/assets/img/IMG_0063.jpg) center center no-repeat;  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
+
+#headtwocont {
+  text-align: center;
+}
+
+#headonereport {
+  text-align: center;
+  background-color: burlywood;
+}
+
+#headtworeport {
+  text-align: center;
+  background-color: ;
+}
+
+#reports {
+  display: grid;
+grid-template-columns: auto;
+gap: 70px 0;
+grid-auto-rows: auto;
+background-color: burlywood;
+}
+
+div input {
+  width: 200px;
+}
+
+.repone {
+grid-column:1 ;
+grid-row:1 ;
+}
+
+.reptwo {
+  grid-column:1 ;
+  grid-row:2 ;
+}
+
+.repthree {
+  grid-column:1 ;
+  grid-row:3 ;
+}
+
+.repfour {
+  grid-column:1 ;
+  grid-row:4 ;
+}
+.repfive {
+  grid-column:1 ;
+  grid-row:5 ;
+}
+
+.repsix {
+  grid-column:2 ;
+  grid-row:1 ;
+}
+
+.repseven {
+  grid-column:2 ;
+  grid-row:2 ;
+}
+
+.repeight {
+  grid-column:2 ;
+  grid-row:3 ;
+}
+
+.repnine {
+  grid-column:2 ;
+  grid-row:4 ;
+}
+
+.repten {
+  grid-column:2 ;
+  grid-row:5 ;
+}
+
+.repeleven {
+  grid-column:1 ;
+  grid-row:6 ;
+}
+
+.reptwelve {
+  grid-column:2 ;
+  grid-row:6 ;
+}
+
+.reptwelvetwo {
+  grid-column:2 ;
+  grid-row:7 ;
+}
+
+.reptwelvetwo > label {
+  display: none;
+}
+
+.repthirteen {
+  grid-column:3 ;
+  grid-row:6 ;
+}
+
+.repthirteentwo {
+  grid-column:3 ;
+  grid-row:7 ;
+}
+
+.repthirteentwo > label {
+  display: none;
+}
+
+.repfourteen {
+  grid-column: 1;
+  grid-row: 7;
+}
+
+#weather {
+  display: grid;
+grid-template-columns: auto;
+gap: 70px 0;
+grid-auto-rows: auto;
+background-color: rgb(19, 136, 72);
+}
+
+.reptemp {
+  grid-column: 1;
+  grid-row: 8;
+}
+
+.repwinddir {
+  grid-column: 2;
+  grid-row: 8;
+}
+
+.repwindspe {
+  grid-column: 3;
+  grid-row: 8;
+}
+
+.repcloudcov {
+  grid-column: 1;
+  grid-row: 9;
+}
+
+.rephumid {
+  grid-column: 3;
+  grid-row: 9;
+}
+
+.print {
+  grid-column: 1;
+  grid-row: 10;
+  width: 100px;
+}
+
+.save {
+  grid-column: 3;
+  grid-row: 10;
+}
+
+
+/* #subform tbody {
+  width: 100%;
+}
+
+#subform th {
+  text-align: center;
+}
+
+#subform td,th {
+  width: 15%;
+} */
+
+
+
+#custdata tbody {
+  width: 100%;
+}
+
+#custdata th {
+  text-align: center;
+}
+
+#custdata td,th {
+  width: 20%;
+}
+
+#timedata tbody {
+  width: 100%;
+}
+
+#timedata th {
+  text-align: center;
+}
+
+#timedata td,th {
+  width: 10%;
+}
+
+#workdata tbody {
+  width: 100%;
+}
+
+#workdata th {
+  text-align: center;
+}
+
+#workdata td,th {
+  width: 10%;
+}
+
+
+#weatherdata tbody {
+  width: 100%;
+}
+
+#weatherdata th {
+  text-align: center;
+}
+
+#weatherdata td,th {
+  width: 15%;
+}
+
+
 
 #suggestion{
   display: flex;
   justify-content: center;
-  padding: 50px;
+  width: 100px 100px;
+  height: 200px;
+  margin: 10px;
+  padding:10px;
+  box-sizing: border-box;
 }
 
 footer {
   display: flex;
 align-items: center;
+width: 100px 100px;
+height: 600px;
 flex-direction: column-reverse;
 }
 
