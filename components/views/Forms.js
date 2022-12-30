@@ -2,7 +2,7 @@ import html from "html-literal";
 
 export default (state) => html`
 <section id="Forms">
-  <form id="Forms" method="POST" action="">
+  <form id="forms" method="POST" action="">
     <h2 id="headtworeport">Herbicide Use Report & Weather</h2>
     <div id="reports">
       <div class="repone">
@@ -37,45 +37,45 @@ export default (state) => html`
         <label for="timestopped">Time Stopped:</label><br>
         <input type ="text" id="timestopped" name="timestopped"><br>
       </div>
+      <div class="repfifteen">
+        <label for="applicatorname">Applicator Name:</label><br>
+        <input type ="text" id="applicator" name="applicator"><br>
+      </div>
+      <div class="repsixteen">
+        <label for="applicatorlicense">Applicator License:</label><br>
+        <input type ="text" id="applic" name="applic"><br>
+      </div>
       <div class="repnine">
         <label for="herbicideamount">Herbicide Amount:</label><br>
         <input type ="text" id="herbicideamount" name="herbicideamount"><br>
       </div>
-      <div class="repten">
-        <label for="targetspecies">Target Species:</label><br>
-        <input type ="text" id="targetspecies" name="targetspecies"><br>
-      </div>
       <div class="repeleven">
-        <label for="papplied">Pesticide Applied:</label><br>
+        <label for="herbicideapplied">Herbicide Applied:</label><br>
         <input type ="text" id="papplied" name="papplied"><br>
       </div>
       <div class="reptwelve">
-        <label for="apprate">Application Rate:</label><br>
+        <label for="herbiciderate">Herbicide Rate:</label><br>
         <input type ="text" id="apprate" name="apprate"><br>
       </div>
       <div class="reptwelvetwo">
-        <label for="appratetwo">Application Rate Two:</label><br>
+        <label for="surfactantrate">Surfactant Rate:</label><br>
         <input type ="text" id="apprate" name="apprate"><br>
       </div>
       <div class="repthirteen">
-        <label for="epanum">EPA Number:</label><br>
+        <label for="herbicideepa">Herbicide EPA:</label><br>
         <input type ="text" id="epanum" name="epanum"><br>
       </div>
       <div class="repthirteentwo">
-        <label for="epanumtwo">EPA Number Two:</label><br>
+        <label for="surfactantepa">Surfactant EPA:</label><br>
         <input type ="text" id="epanum" name="epanum"><br>
       </div>
       <div class="repfourteen">
-        <label for="addmat">Additional Materials:</label><br>
+        <label for="additionalmaterials">Additional Materials:</label><br>
         <input type ="text" id="addmat" name="addmat"><br>
       </div>
-      <div class="repfifteen">
-        <label for="applicator">Applicator Name:</label><br>
-        <input type ="text" id="applicator" name="applicator"><br>
-      </div>
-      <div class="repsixteen">
-        <label for="license">Applicator License:</label><br>
-        <input type ="text" id="applic" name="applic"><br>
+      <div class="repten">
+        <label for="targetspecies">Target Species:</label><br>
+        <input type ="text" id="targetspecies" name="targetspecies"><br>
       </div>
     </div>
     <div id="weather">

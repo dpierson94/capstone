@@ -30,7 +30,7 @@ function afterRender(state) {
       event.preventDefault();
 
       const inputList = event.target.elements;
-      console.log("Input Element List", inputList);c
+      console.log("Input Element List", inputList);
 
 const reportinput = [];
       for (let input of inputList.reportinput) {

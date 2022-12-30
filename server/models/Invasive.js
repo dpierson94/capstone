@@ -86,37 +86,16 @@ const formsSchema = new mongoose.Schema ({
     required: true,
     validate: /^[A-Za-z0-9 ]*$/
   },
+  additionalmaterials: {
+    type: String,
+    required: true,
+    validate: /^[A-Za-z0-9 ]*$/
+  },
   targetspecies: {
     type: String,
     required: true,
     validate: /^[A-Za-z0-9 ]*$/
   },
-  temperature: {
-    type: String,
-    required: true,
-    validate: /^[A-Za-z0-9 ]*$/
-  },
-  humidity: {
-    type: String,
-    required: true,
-    validate: /^[A-Za-z0-9 ]*$/
-  },
-  winddirection: {
-    type: String,
-    required: true,
-    validate: /^[A-Za-z0-9 ]*$/
-  },
-  windspeed: {
-    type: String,
-    required: true,
-    validate: /^[A-Za-z0-9 ]*$/
-  },
-  cloudcover: {
-    type: String,
-    required: true,
-    validate: /^[A-Za-z0-9 ]*$/
-  },
-
 });
 
 const Invasive = mongoose.model('Invasive', formsSchema);

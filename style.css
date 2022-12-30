@@ -182,7 +182,7 @@ background-color: rgb(19, 136, 72);
 }
 
 
-/* #subform tbody {
+#subform tbody {
   width: 100%;
 }
 
@@ -192,7 +192,7 @@ background-color: rgb(19, 136, 72);
 
 #subform td,th {
   width: 15%;
-} */
+}
 
 
 
