@@ -69,6 +69,14 @@ export default (state) => html`
         <label for="addmat">Additional Materials:</label><br>
         <input type ="text" id="addmat" name="addmat"><br>
       </div>
+      <div class="repfifteen">
+        <label for="applicator">Applicator Name:</label><br>
+        <input type ="text" id="applicator" name="applicator"><br>
+      </div>
+      <div class="repsixteen">
+        <label for="license">Applicator License:</label><br>
+        <input type ="text" id="applic" name="applic"><br>
+      </div>
     </div>
     <div id="weather">
       <div class="reptemp">

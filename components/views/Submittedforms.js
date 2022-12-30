@@ -20,10 +20,12 @@ export default (state) => html`
   </table><br><br>
   <table id="workdata">
     <tr>
+      <th>Applicator Name</th>
+      <th>Applicator License #</th>
       <th>Herbicide Amount</th>
-      <th>Pesticide Applied</th>
-      <th>Pesticide Rate</th>
-      <th>Pesticide EPA #</th>
+      <th>Herbicide Applied</th>
+      <th>Herbicide Rate</th>
+      <th>Herbicide EPA #</th>
       <th>Surfactant</th>
       <th>Surfactant Rate</th>
       <th>Surfactant EPA #</th>
