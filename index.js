@@ -21,7 +21,6 @@ function render(state = store.Home) {
 }
 
 function afterRender(state) {
-  // add menu toggle to bars icon in nav bar
   document.querySelector(".fa-bars").addEventListener("click", () => {
     document.querySelector("nav > ul").classList.toggle("hidden--mobile");
   });
@@ -32,8 +31,34 @@ function afterRender(state) {
 
       const inputList = event.target.elements;
       console.log("Input Element List", inputList);c
-    });
-  }
+
+const reportinput = [];
+      for (let input of inputList.reportinput) {
+        if (input.checked) {
+          reportinput.push(input.value);
+        }
+      }
+
+const requestData = {
+  servicename: inputList.servicename.value,
+  client: inputList.client.value,
+  address: inputList.address.value,
+  city: inputList.city.value,
+  zipcode: inputList.zipcode.value
+};
+console.log("request Body", requestData);
+
+axios
+  .post(`${process.env.INVASIVE_REPORTS_API_URL}/invasives`, requestData)
+  .then(response => {
+    store.Submittedforms.custdata.push(response.data);
+    router.navigate("/Invasive");
+  })
+  .catch(error => {
+    console.log("It puked", error);
+  });
+});
+}
 };
 
 router.hooks({

@@ -99,9 +99,7 @@ export default (state) => html`
         <label for="humid">Humidity:</label><br>
         <input type ="text" value=${state.weather.humidity}%><br>
       </div>
-      <div class="save">
-        </a>
-      </div>
+      <input type="submit" name="submit" value="Submit Report" />
       <div class="print">
         <button type="submit" onclick="window.print();return false;" />Print</button>
       </div>
