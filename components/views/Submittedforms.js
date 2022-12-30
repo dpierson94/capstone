@@ -51,7 +51,7 @@ export default (state) => html`
             subform.surfactantepa
           }</td><td>${subform.additionalmaterials}</td><td>${
             subform.targetspecies
-          }</td>`;
+          }</td></tr>`;
         })
         .join("")}
     </table>
