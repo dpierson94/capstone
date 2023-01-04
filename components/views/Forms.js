@@ -93,7 +93,7 @@ export default (state) => html`
       </div>
       <div class="repcloudcov">
         <label for="cloudcov">Cloud Cover:</label><br>
-        <input type ="text" id="cloudcov" name="cloudcov"><br>
+        <input type ="text" value=${state.clouds}><br>
       </div>
       <div class="rephumid">
         <label for="humid">Humidity:</label><br>
