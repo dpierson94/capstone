@@ -21,20 +21,60 @@ function render(state = store.Home) {
 }
 
 function afterRender(state) {
-  // add menu toggle to bars icon in nav bar
   document.querySelector(".fa-bars").addEventListener("click", () => {
     document.querySelector("nav > ul").classList.toggle("hidden--mobile");
   });
 
   if (state.view === "Forms") {
-    document.querySelector("form").addEventListener("submit", event => {
+    document.querySelector("form").addEventListener("submit", (event) => {
       event.preventDefault();
 
       const inputList = event.target.elements;
-      console.log("Input Element List", inputList);c
+      console.log("Input Element List", inputList);
+
+      // const reportinput = [];
+      //       for (let input of inputList.reportinput) {
+      //         if (input.value = '') {
+      //           reportinput.push(input.value);
+      //         }
+      //       }
+
+      const requestData = {
+        servicename: inputList.servicename.value,
+        client: inputList.client.value,
+        address: inputList.address.value,
+        city: inputList.city.value,
+        zipcode: inputList.zipcode.value,
+        applicationdate: inputList.applicationdate.value,
+        timestarted: inputList.timestarted.value,
+        timestopped: inputList.timestopped.value,
+        applicatorname: inputList.applicatorname.value,
+        applicatorlicense: inputList.applicatorlicense.value,
+        herbicideamount: inputList.herbicideamount.value,
+        herbicideapplied: inputList.herbicideapplied.value,
+        herbiciderate: inputList.herbiciderate.value,
+        herbicideepa: inputList.herbicideepa.value,
+        surfactant: inputList.surfactant.value,
+        surfactantrate: inputList.surfactantrate.value,
+        surfactantepa: inputList.surfactantepa.value,
+        additionalmaterials: inputList.additionalmaterials.value,
+        targetspecies: inputList.targetspecies.value,
+      };
+      console.log("request Body", requestData);
+      // store.Submittedforms.forms.push(requestData);
+
+      axios
+        .post(`${process.env.INVASIVE_REPORTS_API_URL}/invasives`, requestData)
+        .then((response) => {
+          store.Submittedforms.forms.push(response.data);
+          router.navigate("/Submittedforms");
+        })
+        .catch((error) => {
+          console.log("It puked", error);
+        });
     });
   }
-};
+}
 
 router.hooks({
   before: (done, params) => {
@@ -81,6 +121,7 @@ router.hooks({
             store.Forms.weather.humidity = response.data.main.humidity;
             store.Forms.weather.wind = response.data.wind.speed;
             store.Forms.weather.description = response.data.weather[0].main;
+            store.Forms.clouds = response.data.main.clouds;
             done();
           })
           .catch(err => console.log(err));

@@ -2,7 +2,7 @@ import html from "html-literal";
 
 export default (state) => html`
 <section id="Forms">
-  <form id="Forms" method="POST" action="">
+  <form id="forms" method="POST" action="">
     <h2 id="headtworeport">Herbicide Use Report & Weather</h2>
     <div id="reports">
       <div class="repone">
@@ -37,45 +37,49 @@ export default (state) => html`
         <label for="timestopped">Time Stopped:</label><br>
         <input type ="text" id="timestopped" name="timestopped"><br>
       </div>
+      <div class="repfifteen">
+        <label for="applicatorname">Applicator Name:</label><br>
+        <input type ="text" id="applicatorname" name="applicator"><br>
+      </div>
+      <div class="repsixteen">
+        <label for="applicatorlicense">Applicator License:</label><br>
+        <input type ="text" id="applicatorlicense" name="applic"><br>
+      </div>
       <div class="repnine">
         <label for="herbicideamount">Herbicide Amount:</label><br>
         <input type ="text" id="herbicideamount" name="herbicideamount"><br>
       </div>
+      <div class="repeleven">
+        <label for="herbicideapplied">Herbicide Applied:</label><br>
+        <input type ="text" id="herbicideapplied" name="papplied"><br>
+      </div>
+      <div class="reptwelve">
+        <label for="herbiciderate">Herbicide Rate:</label><br>
+        <input type ="text" id="herbiciderate" name="apprate"><br>
+      </div>
+      <div class="repthirteen">
+        <label for="herbicideepa">Herbicide EPA:</label><br>
+        <input type ="text" id="herbicideepa" name="epanum"><br>
+      </div>
+      <div class="repsurf">
+        <label for="surfactant">Surfactant:</label><br>
+        <input type="text" id="surfactant" name="surfactant"><br>
+      </div>
+      <div class="reptwelvetwo">
+        <label for="surfactantrate">Surfactant Rate:</label><br>
+        <input type ="text" id="surfactantrate" name="apprate"><br>
+      </div>
+      <div class="repthirteentwo">
+        <label for="surfactantepa">Surfactant EPA:</label><br>
+        <input type ="text" id="surfactantepa" name="epanum"><br>
+      </div>
+      <div class="repfourteen">
+        <label for="additionalmaterials">Additional Materials:</label><br>
+        <input type ="text" id="additionalmaterials" name="addmat"><br>
+      </div>
       <div class="repten">
         <label for="targetspecies">Target Species:</label><br>
         <input type ="text" id="targetspecies" name="targetspecies"><br>
-      </div>
-      <div class="repeleven">
-        <label for="papplied">Pesticide Applied:</label><br>
-        <input type ="text" id="papplied" name="papplied"><br>
-      </div>
-      <div class="reptwelve">
-        <label for="apprate">Application Rate:</label><br>
-        <input type ="text" id="apprate" name="apprate"><br>
-      </div>
-      <div class="reptwelvetwo">
-        <label for="appratetwo">Application Rate Two:</label><br>
-        <input type ="text" id="apprate" name="apprate"><br>
-      </div>
-      <div class="repthirteen">
-        <label for="epanum">EPA Number:</label><br>
-        <input type ="text" id="epanum" name="epanum"><br>
-      </div>
-      <div class="repthirteentwo">
-        <label for="epanumtwo">EPA Number Two:</label><br>
-        <input type ="text" id="epanum" name="epanum"><br>
-      </div>
-      <div class="repfourteen">
-        <label for="addmat">Additional Materials:</label><br>
-        <input type ="text" id="addmat" name="addmat"><br>
-      </div>
-      <div class="repfifteen">
-        <label for="applicator">Applicator Name:</label><br>
-        <input type ="text" id="applicator" name="applicator"><br>
-      </div>
-      <div class="repsixteen">
-        <label for="license">Applicator License:</label><br>
-        <input type ="text" id="applic" name="applic"><br>
       </div>
     </div>
     <div id="weather">
@@ -93,15 +97,13 @@ export default (state) => html`
       </div>
       <div class="repcloudcov">
         <label for="cloudcov">Cloud Cover:</label><br>
-        <input type ="text" id="cloudcov" name="cloudcov"><br>
+        <input type ="text" value=${state.clouds}><br>
       </div>
       <div class="rephumid">
         <label for="humid">Humidity:</label><br>
         <input type ="text" value=${state.weather.humidity}%><br>
       </div>
-      <div class="save">
-        </a>
-      </div>
+      <input type="submit" name="submit" value="Submit Report" />
       <div class="print">
         <button type="submit" onclick="window.print();return false;" />Print</button>
       </div>
