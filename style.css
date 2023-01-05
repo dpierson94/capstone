@@ -16,7 +16,7 @@ nav > ul > li {
 }
 
 #Home {
-  background: url(file:///C:/Users/dpier/code/savvycoders/capstone/assets/img/IMG_0063.jpg) center center no-repeat;  background-size: cover;
+  background: url("/assets/img/IMG_0063.jpg") center center no-repeat;  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -114,9 +114,6 @@ grid-row:1 ;
   grid-row:7 ;
 }
 
-.reptwelvetwo > label {
-  display: none;
-}
 
 .repthirteen {
   grid-column:3 ;
@@ -128,9 +125,7 @@ grid-row:1 ;
   grid-row:7 ;
 }
 
-.repthirteentwo > label {
-  display: none;
-}
+
 
 .repfourteen {
   grid-column: 1;

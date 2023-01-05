@@ -34,7 +34,7 @@ function afterRender(state) {
 
 // const reportinput = [];
 //       for (let input of inputList.reportinput) {
-//         if (input.checked) {
+//         if (input.value = '') {
 //           reportinput.push(input.value);
 //         }
 //       }
@@ -44,6 +44,7 @@ const requestData = {
   client: inputList.client.value,
   address: inputList.address.value,
   city: inputList.city.value,
+  zipcode: inputList.zipcode.value,
   applicationdate: inputList.applicationdate.value,
   timestarted: inputList.timestarted.value,
   timestopped: inputList.timestopped.value,
@@ -64,7 +65,7 @@ console.log("request Body", requestData);
 axios
   .post(`${process.env.INVASIVE_REPORTS_API_URL}/invasives`, requestData)
   .then(response => {
-    store.Submittedforms.custdata.push(response.data);
+    store.Submittedforms.invasives.push(response.data);
     router.navigate("/Submittedforms");
   })
   .catch(error => {

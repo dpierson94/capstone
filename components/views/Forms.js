@@ -39,11 +39,11 @@ export default (state) => html`
       </div>
       <div class="repfifteen">
         <label for="applicatorname">Applicator Name:</label><br>
-        <input type ="text" id="applicator" name="applicator"><br>
+        <input type ="text" id="applicatorname" name="applicator"><br>
       </div>
       <div class="repsixteen">
         <label for="applicatorlicense">Applicator License:</label><br>
-        <input type ="text" id="applic" name="applic"><br>
+        <input type ="text" id="applicatorlicense" name="applic"><br>
       </div>
       <div class="repnine">
         <label for="herbicideamount">Herbicide Amount:</label><br>
@@ -51,27 +51,31 @@ export default (state) => html`
       </div>
       <div class="repeleven">
         <label for="herbicideapplied">Herbicide Applied:</label><br>
-        <input type ="text" id="papplied" name="papplied"><br>
+        <input type ="text" id="herbicideapplied" name="papplied"><br>
       </div>
       <div class="reptwelve">
         <label for="herbiciderate">Herbicide Rate:</label><br>
-        <input type ="text" id="apprate" name="apprate"><br>
-      </div>
-      <div class="reptwelvetwo">
-        <label for="surfactantrate">Surfactant Rate:</label><br>
-        <input type ="text" id="apprate" name="apprate"><br>
+        <input type ="text" id="herbiciderate" name="apprate"><br>
       </div>
       <div class="repthirteen">
         <label for="herbicideepa">Herbicide EPA:</label><br>
-        <input type ="text" id="epanum" name="epanum"><br>
+        <input type ="text" id="herbicideepa" name="epanum"><br>
+      </div>
+      <div class="repsurf">
+        <label for="surfactant">Surfactant:</label><br>
+        <input type="text" id="surfactant" name="surfactant"><br>
+      </div>
+      <div class="reptwelvetwo">
+        <label for="surfactantrate">Surfactant Rate:</label><br>
+        <input type ="text" id="surfactantrate" name="apprate"><br>
       </div>
       <div class="repthirteentwo">
         <label for="surfactantepa">Surfactant EPA:</label><br>
-        <input type ="text" id="epanum" name="epanum"><br>
+        <input type ="text" id="surfactantepa" name="epanum"><br>
       </div>
       <div class="repfourteen">
         <label for="additionalmaterials">Additional Materials:</label><br>
-        <input type ="text" id="addmat" name="addmat"><br>
+        <input type ="text" id="additionalmaterials" name="addmat"><br>
       </div>
       <div class="repten">
         <label for="targetspecies">Target Species:</label><br>
