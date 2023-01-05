@@ -28,8 +28,8 @@ export default (state) => html`
       <th>Wind Direction</th>
       <th>Wind Speed</th>
       <th>Cloud Cover</th>
-    </tr>
-    ${state.invasives
+</tr>
+      ${state.forms
         .map(subform => {
           return `<tr><td><a href="/workdata/${subform._id}">${
             subform.servicename
