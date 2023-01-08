@@ -16,7 +16,7 @@ nav > ul > li {
 }
 
 #Home {
-  background: url("/assets/img/IMG_0063.jpg") center center no-repeat;  background-size: cover;
+  background: url("/assets/img/IMG_0063.jpg") center center no-repeat; background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -189,11 +189,21 @@ background-color: rgb(19, 136, 72);
   width: 15%;
 }
 
-#suggestion{
+#email{
   display: flex;
   justify-content: center;
   width: 100px 100px;
-  height: 200px;
+  height: 40px;
+  margin: 10px;
+  padding:10px;
+  box-sizing: border-box;
+}
+
+#suggest{
+  display: flex;
+  justify-content: center;
+  width: 200px 200px;
+  height: 100px ;
   margin: 10px;
   padding:10px;
   box-sizing: border-box;

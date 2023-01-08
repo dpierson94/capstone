@@ -96,11 +96,14 @@ router.hooks({
             const kelvinToFahrenheit = kelvinTemp =>
               Math.round((kelvinTemp - 273.15) * (9 / 5) + 32);
 
+            const roundedSpeed = wispe =>
+              Math.round(wispe)
+
             store.Home.weather = {};
             store.Home.weather.city = response.data.name;
             store.Home.weather.temp = kelvinToFahrenheit(response.data.main.temp);
             store.Home.weather.humidity = response.data.main.humidity;
-            store.Home.weather.wind = response.data.wind.speed;
+            store.Home.weather.wind = roundedSpeed(response.data.wind.speed);
             store.Home.weather.description = response.data.weather[0].main;
             done();
           })
@@ -115,13 +118,16 @@ router.hooks({
             const kelvinToFahrenheit = kelvinTemp =>
               Math.round((kelvinTemp - 273.15) * (9 / 5) + 32);
 
+            const roundedSpeed = wispe =>
+              Math.round(wispe)
+
             store.Forms.weather = {};
             store.Forms.weather.city = response.data.name;
             store.Forms.weather.temp = kelvinToFahrenheit(response.data.main.temp);
             store.Forms.weather.humidity = response.data.main.humidity;
-            store.Forms.weather.wind = response.data.wind.speed;
-            store.Forms.weather.description = response.data.weather[0].main;
-            store.Forms.clouds = response.data.main.clouds;
+            store.Forms.weather.deg = response.data.wind.deg;
+            store.Forms.weather.speed = roundedSpeed (response.data.wind.speed);
+            store.Forms.weather.all = response.data.clouds.all;
             done();
           })
           .catch(err => console.log(err));
@@ -145,12 +151,16 @@ router.hooks({
           .then(response => {
             const kelvinToFahrenheit = kelvinTemp =>
               Math.round((kelvinTemp - 273.15) * (9 / 5) + 32);
+
+            const roundedSpeed = wispe =>
+              Math.round(wispe)
+
             store.Submittedforms.weather = {};
             store.Submittedforms.weather.city = response.data.name;
             store.Submittedforms.weather.temp = kelvinToFahrenheit(response.data.main.temp);
             store.Submittedforms.weather.humidity = response.data.main.humidity;
-            store.Submittedforms.weather.wind = response.data.wind.speed;
-            store.Submittedforms.weather.description = response.data.weather[0].main;
+            store.Submittedforms.weather.wind = response.data.wind.deg;
+            store.Submittedforms.weather.wind = roundedSpeed(response.data.wind.speed);
             store.Submittedforms.clouds = response.data.main.clouds;
             console.log(response.data);
             done();

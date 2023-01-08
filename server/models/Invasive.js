@@ -114,12 +114,12 @@ const formsSchema = new mongoose.Schema ({
   windspeed: {
     type: String,
     required: true,
-    validate: /^[A-Za-z0-9 ]*$/
+    validate: /^[A-Za-z0-9\. ]*$/
   },
   cloudcover: {
     type: String,
     required: true,
-    validate: /^[A-Za-z0-9 ]*$/
+    validate: /^[A-Za-z0-9\. ]*$/
   },
 });
 

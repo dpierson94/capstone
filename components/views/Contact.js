@@ -2,12 +2,16 @@ import html from "html-literal";
 
 export default (state) => html`
 <section id="contact">
-<form id="contact" method="POST" action="">
-  <h2 id="headtwocont">Suggestions</h2>
-  <div id="suggestion">
-    <label for="suggestion">Suggestions:</label><br>
-    <input type ="text" id="suggestion" name="suggestion">
-  </div>
-  </form>
-  </section>
-  `;
+  <form action="https://formspree.io/f/xvonovql" method="POST">
+  <label id="email">
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label id="suggest">
+    Your suggestions:
+    <textarea name="message"></textarea>
+  </label>
+  <button type="submit">Send</button>
+</form>
+</section>
+`;
