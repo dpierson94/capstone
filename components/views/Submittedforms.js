@@ -51,7 +51,11 @@ export default (state) => html`
             subform.surfactantepa
           }</td><td>${subform.additionalmaterials}</td><td>${
             subform.targetspecies
-          }</td></tr>`;
+          }</td><td>${subform.temperature}</td><td>${
+            subform.humidity
+          }</td><td>${subform.winddirection}</td><td>${
+            subform.windspeed
+          }</td><td>${subform.cloudcover}</td></tr>`;
         })
         .join("")}
     </table>
