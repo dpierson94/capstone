@@ -55,7 +55,12 @@ router.put("/:id", (request, response) => {
         surfactantrate: body.surfactantrate,
         surfactantepa: body.surfactantepa,
         additionalmaterials: body.additionalmaterials,
-        targetspecies: body.targetspecies
+        targetspecies: body.targetspecies,
+        temperature: body.temperature,
+        humidity: body.humidity,
+        winddirection: body.winddirection,
+        windspeed: body.windspeed,
+        cloudcover: body.cloudcover
       }
     },
     {

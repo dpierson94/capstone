@@ -59,6 +59,11 @@ function afterRender(state) {
         surfactantepa: inputList.surfactantepa.value,
         additionalmaterials: inputList.additionalmaterials.value,
         targetspecies: inputList.targetspecies.value,
+        temperature: inputList.temperature.value,
+        humidity: inputList.humidity.value,
+        winddirection: inputList.winddirection.value,
+        windspeed: inputList.windspeed.value,
+        cloudcover: inputList.cloudcover.value,
       };
       console.log("request Body", requestData);
       // store.Submittedforms.forms.push(requestData);
@@ -101,11 +106,6 @@ router.hooks({
           })
           .catch(err => console.log(err));
           break;
-      default :
-        done();
-    }
-
-    switch (view) {
       case "Forms":
         axios
           .get(
@@ -126,6 +126,40 @@ router.hooks({
           })
           .catch(err => console.log(err));
           break;
+      case "Submittedforms":
+        axios
+          .get(`${process.env.INVASIVE_REPORTS_API_URL}/invasives`)
+          .then(response => {
+            store.Submittedforms.forms = response.data;
+            console.log(response.data);
+            done();
+          })
+          .catch(error => {
+            console.log("It puked", error);
+            done();
+          });
+        break;
+      case "Submittedforms":
+        axios
+          .get(`https://api.openweathermap.org/data/2.5/weather?q=st%20louis&appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`)
+          .then(response => {
+            const kelvinToFahrenheit = kelvinTemp =>
+              Math.round((kelvinTemp - 273.15) * (9 / 5) + 32);
+            store.Submittedforms.weather = {};
+            store.Submittedforms.weather.city = response.data.name;
+            store.Submittedforms.weather.temp = kelvinToFahrenheit(response.data.main.temp);
+            store.Submittedforms.weather.humidity = response.data.main.humidity;
+            store.Submittedforms.weather.wind = response.data.wind.speed;
+            store.Submittedforms.weather.description = response.data.weather[0].main;
+            store.Submittedforms.clouds = response.data.main.clouds;
+            console.log(response.data);
+            done();
+          })
+          .catch(error => {
+            console.log("It puked", error);
+            done();
+          });
+        break;
       default :
         done();
     }
