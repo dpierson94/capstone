@@ -85,23 +85,23 @@ export default (state) => html`
     <div id="weather">
       <div class="reptemp">
         <label for="tempf">Temperature:</label><br>
-        <input type ="text" id="temperature" value=${state.weather.temp}&deg;F>
+        <input type ="text" id="temperature" value=${state.weather.temp}F>
       </div>
       <div class="rephumid">
         <label for="humid">Humidity:</label><br>
-        <input type ="text" id="humidity" value=${state.weather.humidity}%><br>
+        <input type ="text" id="humidity" value=${state.weather.humidity}><br>
       </div>
       <div class="repwinddir">
         <label for="winddir">Wind Direction:</label><br>
-        <input type ="text" id="winddirection" name="winddir"><br>
+        <input type ="text" id="winddirection" name="winddir" value=${state.weather.deg}><br>
       </div>
       <div class="repwindspe">
         <label for="windspe">Wind Speed:</label><br>
-        <input type ="text" id="windspeed" name="winspe"><br>
+        <input type ="text" id="windspeed" name="winspe" value=${state.weather.speed}><br>
       </div>
       <div class="repcloudcov">
         <label for="cloudcov">Cloud Cover:</label><br>
-        <input type ="text" id="cloudcover" value=${state.clouds}><br>
+        <input type ="text" id="cloudcover" value=${state.weather.all}><br>
       </div>
 
       <input type="submit" name="submit" value="Submit Report" />
