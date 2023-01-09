@@ -11,7 +11,9 @@ export default (state) => html`
     Your suggestions:
     <textarea name="message"></textarea>
   </label>
+  <div class="embut">
   <button type="submit">Send</button>
+  </div>
 </form>
 </section>
 `;

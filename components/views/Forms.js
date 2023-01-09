@@ -81,8 +81,6 @@ export default (state) => html`
         <label for="targetspecies">Target Species:</label><br>
         <input type ="text" id="targetspecies" name="targetspecies"><br>
       </div>
-    </div>
-    <div id="weather">
       <div class="reptemp">
         <label for="tempf">Temperature:</label><br>
         <input type ="text" id="temperature" value=${state.weather.temp}F>
@@ -103,12 +101,16 @@ export default (state) => html`
         <label for="cloudcov">Cloud Cover:</label><br>
         <input type ="text" id="cloudcover" value=${state.weather.all}><br>
       </div>
-
-      <input type="submit" name="submit" value="Submit Report" />
+    </div>
+      <div class="submitbutton">
+      <div class="subrep">
+        <input type="submit" name="submit" value="Submit Report" />
+      </div>
       <div class="print">
         <button type="submit" onclick="window.print();return false;" />Print</button>
       </div>
-    </div>
+  </div>
+</div>
   </form>
 </section>
   `;

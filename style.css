@@ -4,6 +4,9 @@ nav {
   flex-direction: column;
   background-color: green ;
   color: black;
+  font-weight: bold;
+  font-size: large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 nav > ul {
@@ -16,168 +19,68 @@ nav > ul > li {
 }
 
 #Home {
-  background: url("/assets/img/IMG_0063.jpg") center center no-repeat; background-size: cover;
+  background: url("/assets/img/IMG_0342.jpg") center center no-repeat; background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
+  font-weight: bold;
+  font-size: large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #headtwocont {
   text-align: center;
+  font-weight: bold;
+  font-size: large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #headonereport {
   text-align: center;
   background-color: burlywood;
+  font-weight: bold;
+  font-size: xx-large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #headtworeport {
   text-align: center;
   background-color: ;
+  font-weight: bold;
+  font-size: large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #reports {
   display: grid;
-grid-template-columns: auto;
-gap: 70px 0;
-grid-auto-rows: auto;
-background-color: burlywood;
+  grid-template-columns: 400px 400px 400px 400px;
+  grid-template-rows: 100px 100px 100px 100px 100px 100px;
+  background: url("/assets/img/IMG_0063.jpg") center center no-repeat;
+
+  background-size: cover;
+  font-weight: bold;
+  font-size: large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(246, 250, 4);
 }
+
 
 div input {
   width: 200px;
 }
 
-.repone {
-grid-column:1 ;
-grid-row:1 ;
+#subform {
+  display: inline-grid;
+  grid-template-columns: 400px 400px 400px 400px;
+  grid-template-rows: 100px 100px 100px 100px 100px 100px 100px ;
+  background-size: cover;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
-.reptwo {
-  grid-column:1 ;
-  grid-row:2 ;
-}
-
-.repthree {
-  grid-column:1 ;
-  grid-row:3 ;
-}
-
-.repfour {
-  grid-column:1 ;
-  grid-row:4 ;
-}
-.repfive {
-  grid-column:1 ;
-  grid-row:5 ;
-}
-
-.repsix {
-  grid-column:2 ;
-  grid-row:1 ;
-}
-
-.repseven {
-  grid-column:2 ;
-  grid-row:2 ;
-}
-
-.repeight {
-  grid-column:2 ;
-  grid-row:3 ;
-}
-
-.repnine {
-  grid-column:2 ;
-  grid-row:4 ;
-}
-
-.repten {
-  grid-column:2 ;
-  grid-row:5 ;
-}
-
-.repeleven {
-  grid-column:1 ;
-  grid-row:6 ;
-}
-
-.reptwelve {
-  grid-column:2 ;
-  grid-row:6 ;
-}
-
-.reptwelvetwo {
-  grid-column:2 ;
-  grid-row:7 ;
-}
-
-
-.repthirteen {
-  grid-column:3 ;
-  grid-row:6 ;
-}
-
-.repthirteentwo {
-  grid-column:3 ;
-  grid-row:7 ;
-}
-
-
-
-.repfourteen {
-  grid-column: 1;
-  grid-row: 7;
-}
-
-#weather {
-  display: grid;
-grid-template-columns: auto;
-gap: 70px 0;
-grid-auto-rows: auto;
-background-color: rgb(19, 136, 72);
-}
-
-.reptemp {
-  grid-column: 1;
-  grid-row: 8;
-}
-
-.repwinddir {
-  grid-column: 2;
-  grid-row: 8;
-}
-
-.repwindspe {
-  grid-column: 3;
-  grid-row: 8;
-}
-
-.repcloudcov {
-  grid-column: 1;
-  grid-row: 9;
-}
-
-.rephumid {
-  grid-column: 3;
-  grid-row: 9;
-}
-
-.print {
-  grid-column: 1;
-  grid-row: 10;
-  width: 100px;
-}
-
-.save {
-  grid-column: 3;
-  grid-row: 10;
-}
-
-
-#subform tbody {
+  /* #subform tbody {
   width: 100%;
 }
 
@@ -187,16 +90,17 @@ background-color: rgb(19, 136, 72);
 
 #subform td,th {
   width: 15%;
-}
+} */
 
 #email{
   display: flex;
   justify-content: center;
   width: 100px 100px;
   height: 40px;
-  margin: 10px;
+
   padding:10px;
   box-sizing: border-box;
+  background-color: burlywood;
 }
 
 #suggest{
@@ -204,18 +108,38 @@ background-color: rgb(19, 136, 72);
   justify-content: center;
   width: 200px 200px;
   height: 100px ;
-  margin: 10px;
+
   padding:10px;
   box-sizing: border-box;
+  background-color: burlywood;
 }
 
 footer {
   display: flex;
 align-items: center;
 width: 100px 100px;
-height: 600px;
+height: 50px;
 flex-direction: column-reverse;
+background-color:green
 }
 
+.embut {
+  display: flex;
+  justify-content: center;
+  background-color: burlywood;
 
+}
+
+.subrep {
+  display: flex;
+  justify-content: center;
+  background-color:green
+
+}
+
+.print {
+  display: flex;
+  justify-content: center;
+  background-color: green;
+}
 
