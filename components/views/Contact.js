@@ -1,6 +1,7 @@
 import html from "html-literal";
 
 export default (state) => html`
+<body>
 <section id="contact">
   <form action="https://formspree.io/f/xvonovql" method="POST">
   <label id="email">
@@ -16,4 +17,5 @@ export default (state) => html`
   </div>
 </form>
 </section>
+</body>
 `;

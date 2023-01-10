@@ -1,6 +1,7 @@
 import html from "html-literal";
 
 export default (state) => html`
+<body>
 <section id="Forms">
   <form id="forms" method="POST" action="">
     <h2 id="headtworeport">Herbicide Use Report & Weather</h2>
@@ -113,5 +114,6 @@ export default (state) => html`
 </div>
   </form>
 </section>
+</body>
   `;
 
