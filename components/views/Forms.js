@@ -103,15 +103,15 @@ export default (state) => html`
         <input type ="text" id="cloudcover" value=${state.weather.all}><br>
       </div>
     </div>
-      <div class="submitbutton">
+    <div class="buttons">
       <div class="subrep">
         <input type="submit" name="submit" value="Submit Report" />
       </div>
       <div class="print">
         <button type="submit" onclick="window.print();return false;" />Print</button>
       </div>
+    </div>
   </div>
-</div>
   </form>
 </section>
 </body>

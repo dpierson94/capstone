@@ -34,9 +34,8 @@ body{
   font-size: 40px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-shadow: -1px 0 rgb(255, 255, 255), 0 1px rgb(255, 255, 255), 1px 0 rgb(255, 255, 255), 0 -1px rgb(255, 255, 255);
+
 }
-
-
 
 #headtwocont {
   text-align: center;
@@ -76,6 +75,7 @@ body{
   display: grid;
   grid-template-columns: 400px 400px 400px 400px;
   grid-template-rows: 100px 100px 100px 100px 100px 100px;
+  text-align: center;
   background: url("/assets/img/IMG_0024.jpg") center center no-repeat;
   height: 720px;
   background-size: cover;
@@ -97,22 +97,12 @@ div input {
   display: inline-grid;
   grid-template-columns: 400px 400px 400px 400px;
   grid-template-rows: 100px 100px 100px 100px 100px 100px 100px ;
+  background-color: burlywood;
   background-size: cover;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   height: 800px;
-}
-
-  /* #subform tbody {
-  width: 100%;
-}
-
-#subform th {
   text-align: center;
 }
-
-#subform td,th {
-  width: 15%;
-} */
 
 #contact {
   background-color: burlywood;
@@ -173,5 +163,6 @@ margin: 0;
   display: flex;
   justify-content: center;
   background-color: green;
+
 }
 
