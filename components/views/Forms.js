@@ -1,6 +1,7 @@
 import html from "html-literal";
 
 export default (state) => html`
+<body>
 <section id="Forms">
   <form id="forms" method="POST" action="">
     <h2 id="headtworeport">Herbicide Use Report & Weather</h2>
@@ -81,8 +82,6 @@ export default (state) => html`
         <label for="targetspecies">Target Species:</label><br>
         <input type ="text" id="targetspecies" name="targetspecies"><br>
       </div>
-    </div>
-    <div id="weather">
       <div class="reptemp">
         <label for="tempf">Temperature:</label><br>
         <input type ="text" id="temperature" value=${state.weather.temp}F>
@@ -103,13 +102,18 @@ export default (state) => html`
         <label for="cloudcov">Cloud Cover:</label><br>
         <input type ="text" id="cloudcover" value=${state.weather.all}><br>
       </div>
-
-      <input type="submit" name="submit" value="Submit Report" />
+    </div>
+    <div class="buttons">
+      <div class="subrep">
+        <input type="submit" name="submit" value="Submit Report" />
+      </div>
       <div class="print">
         <button type="submit" onclick="window.print();return false;" />Print</button>
       </div>
     </div>
+  </div>
   </form>
 </section>
+</body>
   `;
 

@@ -32,13 +32,6 @@ function afterRender(state) {
       const inputList = event.target.elements;
       console.log("Input Element List", inputList);
 
-      // const reportinput = [];
-      //       for (let input of inputList.reportinput) {
-      //         if (input.value = '') {
-      //           reportinput.push(input.value);
-      //         }
-      //       }
-
       const requestData = {
         servicename: inputList.servicename.value,
         client: inputList.client.value,

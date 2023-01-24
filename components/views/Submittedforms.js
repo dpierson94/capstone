@@ -1,9 +1,11 @@
 import html from "html-literal";
 
 export default (state) => html`
+<body>
 <section id="subform">
   <table id="workdata">
     <tr>
+
       <th>Service Name</th>
       <th>Client</th>
       <th>Address</th>
@@ -60,4 +62,5 @@ export default (state) => html`
         .join("")}
     </table>
   </section>
+</body>
 `;
